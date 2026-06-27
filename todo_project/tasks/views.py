@@ -15,5 +15,10 @@ def task_delete(request, id):
     del_task = Task.objects.get(id=id).delete()
     return HttpResponse("Task Deleted")
 
+def task(request, task_id):
+    return 3154
+
+
+
 def task_detail(request, id):
     task = Task.objects.get(id=id)
