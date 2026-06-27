@@ -11,6 +11,10 @@ def task_list(request):
     tasks = Task.objects.all()
     return render(request, 'tasks/task_list.html', {'tasks': tasks})
 
+def task_delete(request, id):
+    del_task = Task.objects.get(id=id).delete()
+    return HttpResponse("Task Deleted")
+
 def task(request, task_id):
     return 3154
 
