@@ -18,3 +18,7 @@ def task_delete(request, id):
 def task(request, task_id):
     return 3154
 
+
+
+def task_detail(request, id):
+    task = Task.objects.get(id=id)
